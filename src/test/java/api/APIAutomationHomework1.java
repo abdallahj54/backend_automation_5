@@ -23,13 +23,13 @@ public class APIAutomationHomework1 {
                 .when().post("https://tech-global-training.com/students")
                 .then().log().all().extract().response();
 
+        int postID = response.jsonPath().getInt("id");
+
         response = RestAssured
                 .given().log().all()
                 .header("Content-Type", "application/json")
                 .when().get("https://tech-global-training.com/students")
                 .then().log().all().extract().response();
-
-        int postID = response.jsonPath().getInt("id");
 
         response = RestAssured
                 .given().log().all()

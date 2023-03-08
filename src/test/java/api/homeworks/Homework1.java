@@ -1,10 +1,10 @@
-package api;
+package api.homeworks;
 
 import com.github.javafaker.Faker;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 
-public class APIAutomationHomework1 {
+public class Homework1 {
     public static void main(String[] args) {
 
         Response response;

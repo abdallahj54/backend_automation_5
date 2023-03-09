@@ -1,7 +1,7 @@
-package api.tdd;
+package api.tdd.go_rest;
 
-import api.pojo_classes.go_rest.CreateGoRestUser;
-import api.pojo_classes.go_rest.UpdateGoRestUser;
+import api.pojo_classes.go_rest.CreateGoRestUserWithoutLombok;
+import api.pojo_classes.go_rest.UpdateGoRestUserWithoutLombok;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.javafaker.Faker;
@@ -16,7 +16,7 @@ import utils.ConfigReader;
 
 import static org.hamcrest.core.IsEqual.equalTo;
 
-public class GoRest {
+public class GoRestWithoutLombok {
 
     Response response;
 
@@ -47,7 +47,7 @@ public class GoRest {
     @Test
     public void goRestCRUD() throws JsonProcessingException {
         // Creating a POJO(Bean) object
-        CreateGoRestUser createGoRestUser = new CreateGoRestUser();
+        CreateGoRestUserWithoutLombok createGoRestUser = new CreateGoRestUserWithoutLombok();
 
         // Assigned the values to the attributes
         createGoRestUser.setName("Abdallah Jaber");
@@ -96,7 +96,7 @@ public class GoRest {
                 .extract().response();
 
         System.out.println("\n-----Updating the user with PUT request-----\n");
-        UpdateGoRestUser updateGoRestUser = new UpdateGoRestUser();
+        UpdateGoRestUserWithoutLombok updateGoRestUser = new UpdateGoRestUserWithoutLombok();
 
         updateGoRestUser.setName("Michael Jordan");
         updateGoRestUser.setEmail(faker.internet().emailAddress());

@@ -1,6 +1,6 @@
 package api.pojo_classes.go_rest;
 
-public class CreateGoRestUser {
+public class CreateGoRestUserWithoutLombok {
 
     /**
      * {

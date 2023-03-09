@@ -1,4 +1,4 @@
-package api;
+package api.no_pojo_no_lombok;
 
 import com.github.javafaker.Faker;
 import io.restassured.RestAssured;

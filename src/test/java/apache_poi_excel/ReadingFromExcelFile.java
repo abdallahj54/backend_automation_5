@@ -44,7 +44,6 @@ public class ReadingFromExcelFile {
         int lastCell = sheet.getRow(1).getLastCellNum();
         logger.info("The last cell number from the file is " + lastCell);
 
-
         /**
          * Rows are by Index
          * Cells are by number of cells

@@ -12,7 +12,7 @@ import java.io.IOException;
 
 public class ReadingFromExcelFile {
 
-    private static Logger logger = LogManager.getLogger(ReadingFromExcelFile.class);
+    static Logger logger = LogManager.getLogger(ReadingFromExcelFile.class);
 
     public static void main(String[] args) throws IOException {
 

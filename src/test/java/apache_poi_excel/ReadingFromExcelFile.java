@@ -60,11 +60,9 @@ public class ReadingFromExcelFile {
                 XSSFCell cell = row.getCell(c);
 
                 System.out.print(cell + " | ");
-
             }
-
             System.out.println();
-
         }
+
     }
 }

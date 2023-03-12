@@ -1,7 +1,6 @@
 package api.tdd.go_rest;
 
 import api.pojo_classes.go_rest.CreateGoRestUserWithoutLombok;
-import api.pojo_classes.go_rest.UpdateGoRestUser;
 import api.pojo_classes.go_rest.UpdateGoRestUserWithoutLombok;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;

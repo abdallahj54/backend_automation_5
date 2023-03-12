@@ -89,8 +89,8 @@ public class AddPetToStoreWithLombok {
         logger.info("My pet tag Id with JayWay is " + actualTagId0WithJayWay);
 
         // getting the pet id from the request body
-        //  int expectedPetId = addAPet.getId();
-        int expectedPetId = 3;
+        int expectedPetId = addAPet.getId();
+        //int expectedPetId = 3;
         int expectedTagsId0 = tags0.getId();
 
         // We are logging the information

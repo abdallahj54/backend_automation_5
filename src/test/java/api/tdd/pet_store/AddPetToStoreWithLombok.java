@@ -40,6 +40,7 @@ public class AddPetToStoreWithLombok {
 
     @Test
     public void addPetToStore(){
+        System.out.println("-----Adding a Pet-----\n");
         Category category = Category
                 .builder()
                 .id(10)
@@ -68,7 +69,6 @@ public class AddPetToStoreWithLombok {
                 .status("available")
                 .build();
 
-
         response = RestAssured
                 .given().log().all()
                 .contentType(ContentType.JSON)
@@ -88,9 +88,11 @@ public class AddPetToStoreWithLombok {
         int actualTagId0WithJayWay = JsonPath.read(response.asString(), "tags[0].id");
         logger.info("My pet tag Id with JayWay is " + actualTagId0WithJayWay);
 
+        int actualCategoryIdWithJayWay = JsonPath.read(response.asString(), "category.id");
+        logger.info("Category id from the response is: " + actualCategoryIdWithJayWay);
+
         // getting the pet id from the request body
         int expectedPetId = addAPet.getId();
-        //int expectedPetId = 3;
         int expectedTagsId0 = tags0.getId();
 
         // We are logging the information
@@ -98,8 +100,6 @@ public class AddPetToStoreWithLombok {
 
         //  We are debugging the assertion
         logger.debug("The actual pet id should be " + expectedPetId + " but we found " + actualPetId);
-        // Assert.assertEquals(actualPetId, expectedPetId);
-
         // Assertion with Hamcrest
         assertThat(
                 // the reason why we are asserting
@@ -110,8 +110,15 @@ public class AddPetToStoreWithLombok {
                 is(expectedPetId)
         );
 
+        logger.debug("The actual category id should be " + category.getId() + " but we found " + actualCategoryIdWithJayWay);
+        assertThat(
+                "I am validating the category id",
+                actualCategoryIdWithJayWay,
+                is(category.getId())
+        );
 
-        System.out.println("-----Update The Pet-----");
+
+        System.out.println("\n-----Update The Pet-----\n");
         Category updateCategory = Category
                 .builder()
                 .name("horse")

@@ -1,6 +1,6 @@
 Feature: Validate database connection
 
-  @db
+  @db @smoke
   Scenario Outline: Validate the minimum salary
     Given user is able to connect to database
     When user sends "<query>" to database

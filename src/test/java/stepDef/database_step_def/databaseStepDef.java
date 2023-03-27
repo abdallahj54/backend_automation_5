@@ -1,4 +1,4 @@
-package stepDef.databaseStepDef;
+package stepDef.database_step_def;
 
 import io.cucumber.java.en.*;
 import org.testng.Assert;

@@ -1,4 +1,4 @@
-package stepDef.apiStepDef;
+package stepDef.api_step_def.go_rest;
 
 import api.pojo_classes.go_rest.CreateGoRestUserWithLombok;
 import api.tdd.go_rest.GoRestWithLombok;
@@ -16,7 +16,7 @@ import utils.ConfigReader;
 
 import static org.hamcrest.core.IsEqual.equalTo;
 
-public class ApiStepDef {
+public class GoRestStepDef {
 
     static Logger logger = LogManager.getLogger(GoRestWithLombok.class);
 
